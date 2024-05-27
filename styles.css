@@ -1,0 +1,67 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #101f4f, #000);
+    overflow: hidden;
+    position: relative;
+}
+
+h1 {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 10vw;
+    color: white;
+    text-align: center;
+    margin: 0;
+    z-index: 10;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 20vw;
+    }
+}
+
+.wave {
+    position: fixed;
+    width: 100%;
+    height: 30vh;    
+    bottom: 0;
+    background-repeat: repeat-x;    
+    z-index: 0;    
+}
+
+.wave.wave-1 {
+    animation: moveWaves 60s linear infinite;
+    background-image: url('data:image/svg+xml,<svg viewBox="0 0 500 117.294" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M 0 118.056 L 0 0 C 32.751 2.122 65.502 4.243 88.542 4.514 C 111.581 4.784 124.909 3.204 153.819 2.083 C 182.73 0.962 227.222 0.301 257.639 0.347 C 288.056 0.393 304.397 1.148 327.083 3.472 C 349.77 5.797 378.803 9.692 408.681 9.375 C 438.558 9.058 469.291 2.118 500 0 L 500 118.056 L 0 118.056 Z" stroke="none" stroke-width="0" fill="%23ff0080" fill-opacity="0.265"></path></svg>');
+}
+.wave.wave-2 {
+    animation: moveWaves 50s linear infinite;
+    background-image: url('data:image/svg+xml,<svg viewBox="0 0 500 117.294" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M 0 118.056 L 0 27.778 C 27.822 28.086 55.643 28.394 87.153 25.694 C 118.663 22.995 153.861 17.288 179.861 18.75 C 205.861 20.212 222.662 28.843 246.528 29.167 C 270.394 29.491 301.324 21.508 328.472 22.222 C 355.62 22.936 378.987 32.347 406.944 34.722 C 434.902 37.098 467.451 28.09 500 27.778 L 500 118.056 L 0 118.056 Z" stroke="none" stroke-width="0" fill="%23ff0080" fill-opacity="0.4" ></path></svg>');
+}
+.wave.wave-3 {
+    animation: moveWaves 40s linear infinite;
+    background-image: url('data:image/svg+xml,<svg viewBox="0 0 500 117.294" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M 0 118.056 L 0 55.556 C 29.891 56.38 59.781 57.205 84.028 54.514 C 108.275 51.823 126.878 45.618 155.903 48.958 C 184.928 52.299 224.375 65.185 256.944 65.278 C 289.514 65.37 315.206 52.669 338.889 50.347 C 362.572 48.025 384.247 56.083 410.764 58.681 C 437.281 61.278 468.632 56.389 500 55.556 L 500 118.056 L 0 118.056 Z" stroke="none" stroke-width="0" fill="%23ff0080" fill-opacity="0.53"></path></svg>');
+}
+.wave.wave-4 {
+    animation: moveWaves 30s linear infinite;
+    background-image: url('data:image/svg+xml,<svg viewBox="0 0 500 117.294" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M 0 118.056 L 0 83.681 C 22.87 84.406 45.741 84.784 77.083 83.681 C 108.426 82.577 148.241 79.643 180.903 81.944 C 213.565 84.246 239.074 91.782 259.375 90.625 C 279.676 89.468 294.769 79.616 322.569 75.347 C 350.37 71.078 390.88 72.391 422.569 74.653 C 454.259 76.914 477.139 84.41 500 83.681 L 500 118.056 L 0 118.056 Z" stroke="none" stroke-width="0" fill="%23ff0080" fill-opacity="1"></path></svg>');
+}
+
+.waves .path0 { animation: moveWaves 40s linear infinite; }
+.waves .path1 { animation: moveWaves 35s linear infinite; }
+.waves .path2 { animation: moveWaves 30s linear infinite; }
+.waves .path3 { animation: moveWaves 25s linear infinite; }
+
+@keyframes moveWaves {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: calc(100vw * 2);
+    }
+}
